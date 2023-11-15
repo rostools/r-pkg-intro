@@ -11,3 +11,5 @@ Imports:
     styler,
     testthat,
     usethis
+URL: https://github.com/rostools/r-pkg-intro
+BugReports: https://github.com/rostools/r-pkg-intro/issues
