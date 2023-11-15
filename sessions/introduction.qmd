@@ -1,0 +1,80 @@
+# Introduction to course {#sec-introduction}
+
+{{< include ../includes/_wip.qmd >}}
+
+> [**Introduction slides**](../slides/introduction.html)
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="../slides/introduction.html"></iframe>
+```
+
+</div>
+
+::: {.callout-note collapse="true"}
+## Instructor note
+
+The slides contain speaking notes that you can view by pressing 'S' on
+the keyboard.
+:::
+
+## The Big Picture
+
+<!-- TODO: Add text highlighting the bigger picture of why we teach this. -->
+
+This book and the tools, skills, and knowledge being taught come out of
+the growing awareness of and demand for [open
+science](https://en.wikipedia.org/wiki/Open_science), [reproducible
+research](https://en.wikipedia.org/wiki/Reproducibility), and [software
+sustainability](https://software.ac.uk/resources/approaches-software-sustainability).
+So what are these?
+
+-   Open science is a movement to make scientific data, methods, and
+    results publicly and freely accessible by publishing them with [open
+    licenses](https://opendefinition.org/guide/). These licenses allow
+    others to re-use and modify these outputs without worrying about
+    copyright infringement, often only requiring attribution to the
+    original source.
+-   Reproducible research means ensuring that anyone with access to data
+    and software can feasibly reproduce the same or similar results,
+    both to check them and to build on them. It's important to note that
+    science can be open but not reproducible and reproducible but not
+    open.
+-   Sustainable software is when software is developed in a way that
+    makes it easier for other people to extend and/or maintain it,
+    rather than to replace it. Sustainability isn't just about the
+    software itself, it also depends on the skills and culture of its
+    users. For instance, if a software package is being maintained by a
+    couple of post-docs who are being paid a fraction of what they could
+    earn in industry and have no realistic hope of promotion because
+    their field doesn't value tool building, it doesn't matter whether
+    the package is well tested and easy to install: sooner or later
+    (probably sooner) it will become
+    [abandonware](https://en.wikipedia.org/wiki/Abandonware).
+
+This course presents software development that emphasizes openness,
+reproducibility, and sustainability, because it supports both individual
+researchers and the entire research community.
+
+Diagram of workflow:
+
+-   Develop higher level design of Input, Output, and functions to get
+    the output.
+-   Write out overall aim of package and its major functionalities in
+    README.md
+-   Create fake/find real data to use in examples and for building code.
+-   Save it in data-raw/ and process, use_data_raw().
+-   Run the data-raw script and save in data/ as .rda.
+-   develop code in dev/ (Rmd/script), using load_all() to access the
+    dataset.
+-   convert to function and test
+-   Move to R/, run load_all(), and then test in dev/
+-   Add roxygen doc and include @examples code that shows how the
+    function is used
+-   Create unit test with use_test()
+-   run tests with ctrl-shift-t
+-   Move the finished working code in `dev/` over into `vignettes/`...
+    and write usage docs as you go along.
+-   Build website.
+-   Use Git and GitHub with automated actions.

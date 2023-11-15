@@ -1,0 +1,49 @@
+# TODO: Lesson title here
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+-   Continuous integration using GitHub Actions
+
+**Session objectives**:
+
+-   Deploy a GitHub Action that runs a continuous integration workflow
+
+## TODO: Section
+
+-   Continuous Integration and GitHub Actions
+
+    -   Text: Explain what is continuous integration
+    -   Text: Explain GitHub Actions
+        (https://github.com/features/actions)\[https://github.com/features/actions\]
+    -   Exercise: Deploy a sample GitHub Actions
+        -   Probably one that install R using the r-lib action is a good
+            exercise
+    -   Code: `usethis::use_github_action_check_standard()`
+    -   Text: Explain how to navigate the result of the GitHub Action
+        and the logs window
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

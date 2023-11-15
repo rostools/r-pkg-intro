@@ -1,0 +1,173 @@
+# Pre-course tasks {#sec-pre-course}
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r}
+#| echo: false
+# To trigger downlit.
+```
+
+In order to participate in this course, you must complete everything in
+this pre-course tasks section and finish with **completing the
+[survey]()** at the end. These tasks are designed to make it easier for
+everyone to start the course with everything set up. For some of the
+tasks, you might not understand why you need to do them, but you will
+likely understand why once the course begins.
+
+Depending on your skills and knowledge, these tasks could take between
+**3-5 hrs to finish**, so we suggest planning a full day to complete
+them. Depending on your institution and how they handle installing
+software on work computers, you also might have to contact IT *very
+early* to make sure everything is properly installed and setup.
+
+## Summary of tasks
+
+Here's a quick overview of the tasks you need to do. Specific details
+about them are found as you work through the tasks.
+
+1.  Install a version of R, RStudio, Quarto, and Git that is as updated
+    as possible. For some people, depending on their institution, this
+    task can take the **longest amount of time** because you have to
+    contact your IT to install these packages.
+2.  Install necessary R packages.
+3.  TODO: Add more tasks
+4.  Read the syllabus (@sec-syllabus).
+5.  Read the [Code of
+    Conduct](https://guides.rostools.org/conduct.html).
+6.  Complete the pre-course [survey](): This survey is pretty quick,
+    maybe \~10 minutes. There will be some bits from the tasks that you
+    will need to paste into this survey.
+
+Check each section for exact details on completing these tasks.
+
+## Learning objective
+
+In general, these pre-course tasks are meant to help prepare you for the
+course and make sure everything is setup properly so the first session
+runs smoothly. However, some of these tasks are meant for learning as
+well as for general setup, so we have defined the following learning
+objectives for this page:
+
+1.  TODO: List objectives
+
+## Reading the course website
+
+We will explain this a bit during the course, but read this to start
+learning how the website is structured and how to read certain things.
+Specifically, there are a few "syntax" type formatting of the text in
+this website to be aware of:
+
+-   Folder names always end with a `/`, for example `data/` means the
+    data folder.
+-   R variables are always shown as is. For instance, for the code
+    `x <- 10`, `x` is a variable because it was assigned with 10.
+-   Functions always end with `()`, for instance `mean()` or
+    `read_csv()`.
+-   Sometimes functions have their package name appended with `::` to
+    indicate to run the code from the specific package, since we likely
+    haven't loaded the package with `library()`. For instance, to
+    install packages from GitHub using the `{remotes}` package we use
+    `remotes::install_github()`. You'll learn about this more later.
+-   Reading tasks always start with a statement "Reading task" and are
+    enclosed in a "callout block". Read within this block. We will
+    usually go over the section again to reinforce the concepts and
+    address any questions.
+
+## Installing the latest programs
+
+The first thing to do is to install these programs. You may already have
+some of them installed and if you do, please make sure that they are at
+least the minimum versions listed below. If not, you will need to update
+them.
+
+TODO: Link to Guides for installation?
+
+All these programs are required for the course, even Git. Git, which is
+a software program to formally manage versions of files, is used because
+of it's popularity and the amount of documentation available for it. At
+the end of the course, you will be using Git and GitHub to manage your
+group assignment. Check out the online book [Happy Git with
+R](https://happygitwithr.com/), especially the "Why Git" section, for an
+understanding on why we are teaching Git. Windows users tend to have
+more trouble with installing Git than macOS or Linux users. See the
+section on [Installing Git for
+Windows](https://happygitwithr.com/install-git.html#install-git-windows)
+for help.
+
+> *A note to those who have or use work laptops with restrictive
+> administrative privileges*: You may encounter problems installing
+> software due to administrative reasons (e.g. you don't have permission
+> to install things). Even if you have issues installing or updating the
+> latest version of R or RStudio, you will likely be able to continue
+> with the course as long as you have the minimum version listed above
+> for R and for RStudio. If you have versions of R and RStudio that are
+> older than that, you may need to ask your IT department to update your
+> software if you can't do this yourself. Unfortunately, Git (and
+> Quarto) is not a commonly used software for some organizations, so you
+> may not have it installed and you *will* need to ask IT to install it.
+> We *require* it for the course, so please make sure to give IT enough
+> time to be able to install it for you prior to the course.
+
+*If you encounter any troubles during these pre-course tasks*, try as
+best as you can to complete the task and then let us know about the
+issues in the pre-course survey. If you continue having problems,
+indicate on the survey that you need help and we can try to book a quick
+video call to fix the problem. Otherwise, you can come to the course
+15-20 minutes earlier to get help.
+
+If you're unable to complete the setup procedure due to unfixable
+technical issues, you can use Posit Cloud (to use RStudio on the cloud)
+as a final solution in order to participate in the course. For help
+setting up Posit Cloud for this course, refer to the [Posit Cloud setup
+guide](https://guides.rostools.org/posit-cloud.html).
+
+## TODO: Next section
+
+## Course basics
+
+If you haven't read the syllabus, **please read it now**. Read over what
+the course will cover, what we expect you to learn by the end of it, and
+what our basic assumptions are about who you are and what you already
+know. At the end of this section, we'll ask you a few questions to see
+if you understand what you'll learn in the course.
+
+One goal of the course is to teach about open science, and true to our
+mission, we practice what we preach. The course material is publicly
+accessible (all on this website) and [openly licensed]() so you can
+(re-)use it for free! The material is organized in the order that we
+will cover it in the course.
+
+We have a [Code of Conduct](https://guides.rostools.org/conduct.html).
+If you haven't read it, **read it now**. The survey involves a question
+about Conduct. We want to make sure this course is a supportive and safe
+environment for learning, so this Code of Conduct is quite important.
+
+You're almost done. Please fill out the pre-course survey to finish this
+section, either [at this link]().
+
+See you at the course!
+
+### Overview of the packages created {#sec-overview-packages-created}
+
+Throughout the book, you will build at least two packages (maybe more
+depending on the instructor).
+
+-   The main example package developed throughout the book is the Zipf's
+    Law package zipfs. This package is used for the code-alongs, the
+    actual content, and most of the exercises. Zipf's Law is a
+    fascinating result in the field of quantitative linguistics that
+    states that the second most common word in a body of text appears
+    half as often as the most common, the third most common appears a
+    third as often, and so on. To test whether Zipf's Law holds for a
+    collection of classic novels that are freely available from Project
+    Gutenberg, we will write a software package that counts and analyzes
+    the word frequency distribution in any arbitrary body of text.
+-   The example package for the first project assignment is the Weather
+    in Kenya package kenyaweather. This package is used as a reference
+    when you work on your package for the first project assignment.
+
+Specific details about the project assignments are found in
+@sec-assignments. Two of the packages are completed and can be used as
+references (zipfs and kenyaweather).
+
+<!-- TODO: Add link to the repos with these packages. -->

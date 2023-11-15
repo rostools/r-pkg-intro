@@ -1,0 +1,13 @@
+Package: rpkgintro
+Type: Website
+Title: "Introduction to building R Packages"
+Version: 0.1
+License: MIT + file LICENSE
+Imports: 
+    devtools,
+    knitr,
+    miniUI,
+    rmarkdown,
+    styler,
+    testthat,
+    usethis

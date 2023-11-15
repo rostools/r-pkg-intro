@@ -1,0 +1,82 @@
+# Exposing your package to the world with a website:
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+-   Setting up a website (with pkgdown)
+-   Customizing the themes
+-   Getting all resources and material organized
+-   Defining lifecycle of your package and individual functions (with
+    lifecycle)
+
+**Session objectives**:
+
+-   Describe the functionality `pkgdown` provides to deploy a website
+    for package documentation and then learn to use pkgdown to deploy a
+    website
+-   Customize the website with pre-existing themes
+-   Organize the website with vignettes, tutorials and custom pages
+-   Explain a functions' lifecycle process and the tools to handle it in
+    R
+
+## TODO: Section
+
+-   `pkgdown`
+
+    -   Text: What is `pkgdown`?
+    -   Exercise: Visit the [`ggplot2` `pkgdown`
+        page](https://ggplot2.tidyverse.org/) and identify 3 benefits of
+        having such a page
+    -   Text: Benefits of having documentation be code-generated
+    -   Text: Benefits of having a public website with the package docs
+    -   Text: Talk about the build process bouth locally and through
+        GitHub pages
+    -   Exercise: Build and serve the website locally
+
+-   Website Customization
+
+    -   Text: Why does making a package website standout is useful
+    -   Text: Where do the `pkgdown` themes come from?
+    -   Exercise: Change the theme of the website to one different from
+        the default
+    -   Text: Organizing beyond themes
+        -   Text: Transition to talking about sections, tutorials and
+            vignettes
+        -   Exercise: Organize the reference page so that related
+            functions are grouped together
+
+-   Functions' Lifecycle
+
+    -   Text: Explain what is the lifecycle of a function
+    -   Text: Explain the different lifecycle stages
+        -   Text: {experimental --\> stable --\> either deprecated or
+            superseded}
+    -   Exercise: Search for a superseded function in a tidyverse
+        package
+        -   We can specify which package later
+    -   Text: Walkthrough of the process of deprecating a function
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

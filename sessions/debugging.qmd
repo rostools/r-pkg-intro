@@ -1,0 +1,67 @@
+# Checking correctness of code: Debugging
+
+-   Using basic debugging strategies ('breakpoints', simple `print()` or
+    `stop()` calls, `debug()`, `browser()`)
+-   Can take some from the intermediate course (I think that's where it
+    is)
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+-   Enter the interactive debugger and use it to explore why unexpected
+    behavior is occurring
+
+## TODO: Section
+
+-   Debugging your functions
+    -   Text: Tracking down problems. Give code example with unexpected
+        output. How do we figure out what the problem is?
+    -   Code: Motivation? Maybe, something like:
+        `> book_meta(c("Title: Dracula", "Author: Bram Stoker"))         # A tibble: 0 x 3         # … with 3 variables: author <chr>, title <chr>, release <chr>`
+        Why don't we get a one row tibble back?
+    -   Text: Print debugging. An easy way to start, but like a
+        postmortem, can't step in and try to solve problem.
+    -   Code: `print()`, `cat()`, `str()`
+    -   Text: Diving inside your functions. Sometimes you want to try
+        things inside your function. The interactive debugger puts you
+        inside the function environment.
+    -   Code: Adding Editor breakpoints
+    -   Text: Navigating the interactive debugger, focus on Environment
+        and Console, execute next statement, stop.
+    -   Text: Other ways to enter the interactive debugger? e.g.
+        `debug()`, `browser()`
+    -   Exercise: Back to motivation, can you narrow down the problem
+        and suggest a solution?
+    -   Text: One solution,
+        `extract_element("Author: Bram Stoker", "Title")`, would be more
+        useful if returned `NA`. Use tests to describe bugs - test fails
+        now, but you'll know you've fixed the bug once test passes.
+    -   Code: Add tests that fail.
+    -   Exercise: Fix the failing tests, and confirm all tests pass.
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

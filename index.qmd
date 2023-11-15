@@ -1,0 +1,90 @@
+# Welcome!
+
+{{< include includes/_wip.qmd >}}
+
+Computational skills are essential in the modern research environment,
+which increasingly involves large datasets and high performance
+computing, along with increasing demand that scientific studies be
+reproducible and open. With these modern demands, researchers across
+nearly all disciplines often need to create, use, and share software.
+Most introductions to programming or software engineering focus on
+developing commercial applications, however, researchers needs are
+largely related to exploring problems and answering questions. This book
+covers the fundamentals of creating software as part of your research
+cycle whether you work alone or as part of a team.
+
+We wrote this book with three audiences in mind:
+
+1.  **Learners in a class setting** who would be using this book in a
+    more formal class or workshop setting, lead by an instructor or
+    instructors. Much of the book is written with this reader in mind.
+2.  **Independent learners** who would be going through the material and
+    learning on their own. An independent learner can for the most part
+    follow the book as if they were a learner in a class setting, with
+    some modifications that we highlight and describe where necessary.
+3.  **Instructors** who would use this book as the basis for a course or
+    workshop of their own. Throughout the book there are sections
+    dedicated to this reader that give information or instructions on
+    how to use or modify the material for the instructor's specific
+    context. See Appendix @sec-for-instructors for more detail about how
+    to use this book for teaching.
+
+This course is designed to address these issues in code-along sessions
+(instructor and learner coding together), reading activities, and
+exercises using real-world datasets. This website contains all of the
+material for the course, from reading material to exercises to images.
+It is structured as a book, with "chapters" as lessons, given in order
+of appearance. We make heavy use of the website throughout the course
+where code-along sessions follow the material on the website nearly
+exactly (with slight modifications for time or more detailed
+explanations).
+
+The course material was created using [Quarto](https://quarto.org/) to
+write the lessons and create the book format,
+[GitHub](https://github.com/) to host the [Git](https://git-scm.com/)
+repository of the material, and [GitHub
+Actions](https://github.com/features/actions) with
+[Netlify](https://www.netlify.com/) to create and host the website. The
+original source material for this course is found on the
+[`r-cubed-advanced`](https://github.com/rostools/r-cubed-advanced)
+GitHub repository.
+
+Want to contribute to this course? Check out the
+[README](https://github.com/rostools/r-cubed-advanced/blob/main/README.md)
+file as well as the
+[CONTRIBUTING](https://github.com/rostools/r-cubed-advanced/blob/main/CONTRIBUTING.md)
+file on the GitHub repository for more details. The main way to
+contribute is by using [GitHub](https://github.com/) and creating a [new
+Issue](https://github.com/rostools/r-cubed-advanced/issues/new) to make
+comments and give feedback for the material.
+
+## Re-use and licensing {#licensing}
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" style="border-width:0"/></a>
+
+The course is licensed under the [Creative Commons Attribution 4.0
+International License](https://creativecommons.org/licenses/by/4.0/) so
+the material can be used, re-used, and modified, as long as there is
+attribution to this source.
+
+## Acknowledgements
+
+The [Danish Diabetes Academy](https://www.danishdiabetesacademy.dk/)
+hosts, organizes, and sponsors this course. A huge thanks to them for
+their involvement and support! [Steno Diabetes Center
+Aarhus](https://www.stenoaarhus.dk/) and [Aarhus
+University](https://au.dk) employs Luke Johnston, who is the lead
+instructor and curriculum developer.
+
+<!-- TODO: Update only if they host us -->
+
+<!-- ![Danish Diabetes and Endocrinology -->
+
+<!-- Academy](https://ddeacademy.dk/wp-content/uploads/2023/03/DDEA_logo_NN-2048x497.png){width="90px"} -->
+
+This course was developed as part of the NNF funding.
+
+<!-- TODO: List NNF fund source, number, etc. -->
+
+![Steno Diabetes Center Aarhus](images/logo-sdca.png){width="55px"}
+

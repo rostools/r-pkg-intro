@@ -1,0 +1,75 @@
+# Project exercise {#sec-project}
+
+The aim of this exercise is to reinforce what you've learned during this
+course.
+
+## Create a package of your own
+
+The first assignment is to create a small, simple package. The *learning
+objective* for this project is to practice and reinforce the skills and
+knowledge you've learned throughout the book and to start building your
+confidence in package development that will help for the later
+assignments.
+
+The project assignment is recommended to be **due** immediately after
+the Package Release lesson (@sec-package-release). At the end of each
+chapter there is a final exercise that gives you tasks to do that guide
+you in completing this first project assignment. These final exercises
+are used as milestones to ensure you are making progress on your
+assignment.
+
+An *acceptable* package for completing the assignment would have at a
+*minimum*:
+
+-   Two to three functions.
+-   (Optional) a dataset with associated roxygen documentation and an R
+    script that generated, extracted, and/or processed the dataset.
+-   A unit test for each function.
+-   Roxygen documentation for each function.
+-   A README with enough detail to know what the package aims to do, a
+    simple example for how to use it, how to install it, and a link to
+    details about how to contribute.
+-   CONTRIBUTING guidelines, a License, and a Code of Conduct.
+-   Has a passing R CMD check on the Continuous Integration service (in
+    this case GitHub Actions).
+
+TODO: Add some optional things to add to the package, for those keen on
+doing it.
+
+Some optional things to add include:
+
+-   A pkgdown website.
+-   Passing local rhub checks.
+
+For an instructor led course, your instructor will decide the exact
+details of what is required to complete this assignment and what topic
+or problems the package should focus on.
+
+> For the *self-directed learners* who are going through this book on
+> their own, the assignment is to create a package that creates some
+> custom summaries of the climate, either local, regional, national, or
+> global. These summaries could include minimum and maximum historical
+> temperatures, how many days of rainy or cloudy days, or amount of
+> rainfall. You can decide on which location to choose, but we recommend
+> creating something for your own city or region. Climate data is
+> available from the TODO: Add link to climate data website. TODO: Add
+> more detail and descriptions on how to do this.
+
+For an example of what this might look like, see TODO: Add the repo of
+the example climate package. Each final exercise will link to this
+example package to use as a reference for how the final exercise should
+or could be done.
+
+### Rubric and expectations of the learner
+
+TODO: Can fill this out more as we work on book
+
+The expectations for completing the project assignments change as the
+content progresses.
+
+-   After the first Git lesson (REF), project should have frequent and
+    consistent commits and, after the GitHub lesson (REF), pushes to
+    GitHub. The GitHub history will be checked to confirm this happens.
+-   Tasks in the final chapter exercises should be completed shortly
+    after finishing the chapter.
+

@@ -1,0 +1,345 @@
+# TODO: Lesson title here
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+-   Describe the purpose of documenting code and packages
+-   Document functions with `{roxygen2}`
+
+## Documenting Functions
+
+## Why do we need documentation? {#introduction}
+
+Just like version control tracks what changes you make and why,
+documentation for code and packages tells your collaborators, your
+package's users, and future you *what* the code does and *why*.
+
+Over time, programming languages have become more "human-readable": it
+is possible for an experienced programmer to read code and understand
+what it does. But even if one understands *what* a chunk of code is
+doing, it may not be obvious at all *why* it does that! Programming
+languages come with built-in ways to add comments and documentation that
+are not read by the computer, but exist solely to help you and your
+collaborators describe and understand code. Good documentation is key
+for openness, reproducibility, and project sustainability.
+
+Good documentation happens at all scales of code: at the level of
+individual objects, functions, and tests as well as for the entire
+package. In this chapter, we describe the workflow of documentation
+alongside package development and outline the components of a
+well-documented package.
+
+-   Text: Outline of Roxygen workflow: special comments above
+    functions + `document()`, generates `man/` and allows
+    `?function_name`, Maybe explain all this using an existing package.
+
+-   Code: With `book_meta()` RStudio: Code -\> Insert ROxygen Skeleton,
+    `document()`, `?book_meta()`
+
+```{cs-book-meta-roxygen-skeleton}
+#' Title
+#'
+#' @param text 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+book_meta <- function(text){
+  tibble::tibble(
+    author = extract_element(text, "Author: "), 
+    title =  extract_element(text, "Title: "),
+    release_date = extract_element(text, "Release Date: ")
+  )
+}
+```
+
+```{cs-document}
+document()
+?book_meta
+```
+
+-   Text: Common Roxygen tags (title, arguments, return, examples), demo
+    with `book_meta()`
+
+```{cs-book-meta-roxygen-complete}
+#' Get book metadata from a Gutenberg book
+#'
+#' @param text A character vector of lines from a Gutenberg book
+#'
+#' @return a one row tibble with `author`, `title` and `release` columns.
+#' @export
+#'
+#' @examples
+#' book_meta(dracula[1:20])
+book_meta <- function(text){
+  tibble::tibble(
+    author = extract_element(text, "Author: "), 
+    title =  extract_element(text, "Title: "),
+    release_date = extract_element(text, "Release Date: ")
+  )
+}
+```
+
+### Exercise: Document `count_words()`
+
+Reminder of steps:
+
+1.  Insert a roxygen skeleton above the definition of `count_words()`
+2.  Run `document()` to generate help page and preview with
+    `?count_words`
+3.  Edit the roxygen comment.
+4.  Iterate steps 2. and 3. until done.
+
+```{r sol-document-count-words}
+#' Count word frequency in text
+#'
+#' Counts the occurrence of words over all elements provided in `text`.
+#'
+#' Each element of `text` is considered a line.
+#' Lines are first converted to lower case then split into words
+#' by whitespace. Then punctuation is removed, and empty strings are ignored.
+#'
+#' @param text A character vector
+#'
+#' @return A tibble with columns `word`,
+#' and `n` the number of times `word` occurs in `text`.
+#' @export
+#'
+#' @examples
+#' count_words(dracula)
+```
+
+-   Text: `@export`, why we might not document every function., e.g.
+    `extract_element()`
+
+## Stopping Your Function with an Error
+
+-   Text: Alternate workflow for editing functions, use `@examples`,
+    edit directly in `R/book-meta.R`. Add `book_meta(1)` as example.
+
+```{r cs-add-example}
+#' Get book metadata from a Gutenberg book
+#'
+#' @param text A character vector of lines from a Gutenberg book
+#'
+#' @return a one row tibble with `author`, `title` and `release` columns.
+#' @export
+#'
+#' @examples
+#' book_meta(dracula[1:20])
+#' book_meta(1)
+```
+
+<!-- This will cause a check error later, because examples need to run without error. -->
+
+-   Text: Basic checks of user input, how to return an error
+
+Basic template of input check:
+
+``` r
+if( << test for bad input >> ){
+    stop("<< message for bad input >>", call. = FALSE)
+}
+```
+
+-   Text: As a comment? Mention other kinds of process control, give
+    pointer to learn more.
+
+```{r ce-bad-input-ideas}
+text <- 1
+is.numeric(text) 
+is.character(text)
+!is.character(text)
+```
+
+Guidance for writing error messages:
+<https://style.tidyverse.org/error-messages.html>
+
+See if you want fancier bulleted list type error messages:
+<https://rlang.r-lib.org/reference/abort.html>
+
+```{r ce-bad-input-check}
+if(!is.character(text)){
+    stop("`text` must be a character vector.", call. = FALSE)
+}
+```
+
+Add to function definition
+
+```{r cs-book-meta-with-check, eval = FALSE}
+book_meta <- function(text){
+    if(!is.character(text)){
+        stop("`text` must be a character vector.", call. = FALSE)
+    }
+    tibble::tibble(
+        author = extract_element(text, "Author: "), 
+        title =  extract_element(text, "Title: "),
+        release_date = extract_element(text, "Release Date: ")
+    )
+}
+```
+
+`load_all()` Rerun examples
+
+### Exercise: Add an input check to `count_words()`.
+
+```{r sol-input-check-count-words}
+count_words <- function(text) {
+    if(!is.character(text)){
+        stop("`text` must be a character vector.", call. = FALSE)
+    }
+    
+    # convert to all lower
+    text_lower <- str_to_lower(text) 
+    
+    # split by one or more whitespace characters
+    chunks <- unlist(str_split(text_lower, "\\s+"))
+    
+    # remove punctuation
+    words <- str_remove_all(chunks, pattern = "[[:punct:]]+")
+    
+    # get rid of empty strings
+    words <- words[words != ""]
+    
+    # count occurrences and sort
+    word_freq <- sort(table(words), decreasing = TRUE)
+    
+    # return in rectangular format
+    tibble(word = names(word_freq), n = as.numeric(word_freq))
+}
+```
+
+## Wrapping Up
+
+-   Text: Re-iterate idea of extracting common code into simpler
+    functions. Suggest input check could be its own function. Then
+    describe steps as a review of chapter: decide on a name, decide on a
+    file to store it, write it, try it, careful with dependencies,
+    document it.
+
+## Documenting functions and tests with roxygen2 {#function-documentation}
+
+In R, documentation files for objects are stored by default in the
+`man/` folder in your package directory with a `.Rd` extension. These
+help files can be accessed for an object, function, or package by typing
+`?object-name` or `help(object-name)`. Writing documentation for
+functions as you write the function itself is helpful for future you and
+other users to understand how to use your code. You can edit these
+documentation files directly, but the package `{roxygen2}` provides some
+shortcuts to make it easier to generate the help files with standard
+formatting.
+
+Let's add documentation for the function `extract_element()` from the
+zipfs package. First, all we need to do is write the function itself.
+
+```{r cs-extract-element-fun}
+extract_element <- function(text, element){
+  line <- str_subset(text, element)
+  str_remove(line, element)
+}
+```
+
+Next, with your cursor over the function definition, click
+`Code > Insert roxygen skeleton` in RStudio (or use the command palette
+with `Ctrl-Shift-P` and then type out `roxygen` to search for the
+option). This command adds the default components of function
+documentation as comments above the function.
+
+```{r cs-extract-element-with-roxygen}
+#' Title
+#'
+#' @param text 
+#' @param element 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+extract_element <- function(text, element){
+  line <- str_subset(text, element)
+  str_remove(line, element)
+}
+```
+
+We can edit the default template to add more information in each field.
+The fields `@return` and `@export` are optional, depending on the
+function's behavior. We'll also add an example of how to use the
+function.
+
+<!-- TODO: perhaps include a deliberate typo here to be caught later by `spelling`?-->
+
+```{r cs-extract-element-fill-in-roxygen}
+#' Extract specific text element from string.
+#'
+#' @param text A string of text
+#' @param element A substring to search for in `text`
+#'
+#' @return The matching line without the text matched by `element`
+#' @export
+#'
+#' @examples
+#' text <- "Title: Dracula"
+#' extract_element(text, "Title: ")
+extract_element <- function(text, element){
+  line <- str_subset(text, element)
+  str_remove(line, element)
+}
+```
+
+Next, press `Ctrl/Cmd + Shift + D` or run `devtools::document()` in the
+Console to generate or update a file named `man/extract_element.Rd`. Try
+typing `?extract_element()` in the console to see what happens! (You may
+need to run `devtools::load_all()` in order to test out the new help
+file.)
+
+<!-- TODO: I wasn't able to get the man file to generate - 'Error: Clipboard on X11 requires that the DISPLAY envvar be configured.' -->
+
+### Exercise: Add roxygen comments to functions in zipfs {#ex-roxygen}
+
+<!-- TODO: All functions in the draft package have documentation except `dpower` and `nllpower` - we can document these ones, or take out other documentation to do this exercise. -->
+
+Follow the steps above to add documentation for the `dpower()` and
+`nllpower()` functions in the zipfs package. What files are created in
+the `man/` folder when multiple functions in the same file are
+documented?
+
+### Documenting tests
+
+TODO: Decide if this is needed based on what is put into chapter 6.
+
+-   Code: FIXME test documentation workflow
+-   Exercise: add and/or improve comments and documentation in a test
+    file in the zipfs package.
+
+Reference: ([R Packages
+reference](https://r-pkgs.org/man.html?q=roxygen#man))
+
+## TODO: Section
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

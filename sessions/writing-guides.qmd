@@ -1,0 +1,199 @@
+# Developing documentation and tutorials on usage {#package-documentation}
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+-   Create a README and vignette for package documentation
+-   Ensure that documentation is consistent with up-to-date style
+    guidelines using `{styler}`
+
+## TODO: Section
+
+## The README: The first stop documentation shop {#create-readme}
+
+<!-- Some bits from py-rse/packaging -->
+
+When a user or contributor first encounters a package, they usually want
+to know what the package is meant to do, instructions on how to install
+it, and examples of how to use it. We can include these elements in the
+README file.
+
+The function `usethis::use_readme_rmd()` creates an R Markdown document
+with some boilerplate sections and text. These default "Installation"
+and "Example" sections are a great starting point to create a helpful
+and descriptive README.
+
+```{r cs-readme, eval=TRUE}
+use_readme_rmd()
+```
+
+### Exercise: R Markdown vs. Mardown {#ex-rmd-md}
+
+Read the help file for `use_readme_rmd()` and `use_readme_md()`. What is
+the difference between `.Rmd` and `.md` files? Why might one or the
+other be better for a README?
+
+GitHub treats the file `README.md` specially, displaying it at the top
+of your repo for easy access. The README created by `use_readme_rmd()`
+contains the basics of what a package README should have.
+
+```{r ce-show-readme-contents, echo=FALSE, results='asis'}
+# This prints the contents as output in the book.
+cat(usethis:::render_template(
+    "package-README",
+    data = list(on_github = TRUE, Package = "zipfs"),
+    package = "usethis"
+), sep = "\n")
+```
+
+### Knitting the Markdown README {#knit-readme}
+
+To create the Markdown README that GitHub will display, you can use
+`{knitr}` to knit the RMD file into `README.md`. The YAML text
+`output: github_document` included in the template tells `{knitr}` to
+create a Markdown output for GitHub instead of the default HTML. In
+RStudio, click `Knit` in the menu above the editor, or run
+`devtools::build_readme()` in the Console as suggested by the template
+text.
+
+The main difference between `devtools::build_readme()` and knitting is
+that `build_readme()` will do some additional checks that will be
+important for submitting to CRAN. This step is really only important
+before you submit to CRAN, not while actively developing the package.
+
+### Exercise: Edit and knit the zipfs README {#ex-readme}
+
+Edit `README.Rmd` to include a description of zipfs, installation
+instructions, and an example of its use. Knit the `README.Rmd` file so
+it creates a `README.md` file.
+
+## Vignettes: Long-form documentation of examples {#vignette}
+
+Everything we've discussed about documentation so far applies to all
+programming projects in nearly any language: All programming languages
+provide some way to document code, and all GitHub projects have READMEs.
+"Vignettes" are a distinctly R type of documentation - they describe a
+problem-solving unit of your package in detail, with examples.
+
+The function `browseVignettes()` allows you to, you guessed it, browse
+existing vignettes. Calling `browseVignettes()` with no arguments will
+open a browser window with a list of vignettes for all installed
+packages, while `browseVignettes("packagename")` will show vignettes for
+a particular package. You can also call up a vignette directly if you
+know its name with `vignette("vignettename")`.
+
+```{r cs-vignette, eval=FALSE}
+browseVignettes("tidyr")
+vignette("nest")
+```
+
+### Exercise: Finding package vignettes {#ex-find-vignette}
+
+Find the vignette(s) for the packages `{devtools}` and `{ggplot2}`. Why
+might a package have more than one vignette? In what ways is a vignette
+different from a README?
+
+### Making a vignette {#make-vignette}
+
+Once again, `{usethis}` has a useful function to help us create
+vignettes. The function `usethis::use_vignette()` takes a package name
+and vignette title and creates a short template R Markdown document in
+the `vignettes/` folder.
+
+```{r cs-create-vignette, eval=TRUE}
+use_vignette("zipfs", title = "Using zipfs")`
+```
+
+The boilerplate text is very minimal. Try knitting the file
+`vignette/zipfs.Rmd` to see what's included by default - it's not much.
+Vignettes can vary a lot depending on the goals of the author; they can
+be long or short,
+[simple](https://cran.r-project.org/web/packages/devtools/vignettes/dependencies.html)
+or
+[complex](https://cran.r-project.org/web/packages/ggplot2/doc/extending-ggplot2.html).
+
+### Exercise: Edit a zipfs vignette {#ex-edit-vignette}
+
+<!-- This might be too involved for a single exercise -->
+
+Modify the vignette `zipfs.Rmd` (in the `vignettes/` folder) to include
+a one-paragraph description of the purpose of zipfs, and an example of
+how to use the zipfs functions together to analyze a book. Knit the file
+to preview the vignette.
+
+Reference: [R packages](https://r-pkgs.org/vignettes.html)
+
+## Writing in style: The housekeeping help of styler and spelling {#styler-spelling}
+
+When writing code, some aspects of formatting are very strict, but there
+are still choices a programmer can make about the appearance and content
+of code. For instance, R strictly requires that parentheses be properly
+paired in order for code to function (`print("hi")` will run,
+`print("hi"` will not), but things like variable names and the position
+of whitespace are more flexible. To create code that is maximally
+understandable, many communities have developed *style guides* that
+outline guidance for how to write clear code and documentation. Check
+out the [tidyverse style guide](https://style.tidyverse.org/)'s
+[syntax](https://style.tidyverse.org/syntax.html) section for examples
+of the types of stylistic decisions we make when writing code.
+
+Different communities may disagree on certain aspects of style.
+[Google's R style
+guide](https://google.github.io/styleguide/Rguide.html) lists
+differences between their guide and the tidyverse style guide. For
+instance, tidyverse recommends that all object names be written in
+`snake_case` (lowercase with underscores), while Google prefers function
+names to be written in `BigCamelCase` (capitalizing the first letter of
+each word). Which style guide you adhere to will depend on who your
+project is for, who you're working with, and on your own personal
+preferences.
+
+It's possible to adhere to a style guide by remembering the rules and
+applying them yourself, but luckily there are tools that can help
+automate the boring parts. The package `{styler}` automatically formats
+code according to a specified style guide: Simply run
+`styler::style_pkg()` to format your code according to the tidyverse
+style guide by default.
+
+In the same spirit, the package `{spelling}` does a spell check on the
+documentation files in a package. Run `spelling::spell_check_package()`
+prints a list of potential spelling errors and their locations to the
+console; unlike `{styler}`, it does not modify files.
+
+### Exercise: Checking style {#ex-styler}
+
+Run `style_pkg()` to restyle the files in the zipfs package. Use Git to
+explore some of the changes that were made. What do you notice?
+
+### Exercise: Checking spelling {#ex-spelling}
+
+Run `spell_check_package()` to check the spelling in the zipfs
+documentation files. Fix the errors, then run `update_wordlist()` to add
+any special words to the spell-checker that you want to ignore.
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items

@@ -1,0 +1,20 @@
+# What next
+
+{{< include ../includes/_wip.qmd >}}
+
+> [**Slides**](../slides/introduction.html)
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="../slides/introduction.html"></iframe>
+```
+
+</div>
+
+::: {.callout-note collapse="true"}
+## Instructor note
+
+The slides contain speaking notes that you can view by pressing 'S' on
+the keyboard.
+:::

@@ -1,0 +1,145 @@
+# Checking correctness of code
+
+-   Unit test (with testthat)
+    -   While in R script, `use_test()` will create one automatically
+        related to the open script.
+-   With devtools
+
+{{< include ../includes/_wip.qmd >}}
+
+```{r setup}
+#| include: false
+```
+
+<!-- TODO: Add an introduction here -->
+
+**Session objectives**:
+
+-   Add a formal test of a package function using testthat
+-   Run all the tests for a file in `R/`
+-   Describe an expectation using an `expect_xxx()` function
+-   Implement the workflow to validate an R package locally
+
+## TODO: Section
+
+-   Adding formal tests to your package
+
+    -   Text: How do we know our code is correct? So far, informal
+        testing with examples. Load functions, run example code, examine
+        output. Formal testing automates this.
+    -   Text: Getting set up to use testthat.
+    -   Code: `use_test()`, `test_file()` (and "Run tests" button in
+        RStudio IDE)
+    -   Text: The structure of test files: many tests of functions from
+        corresponding .R file, where each test (created with
+        `test_that()`), contains a series of expectations (created with
+        `expect_xxx()`).
+    -   Text: What are expectations? Most common `expect_equal()`. Demo
+        simple examples by running `expect_equal()` on command line.
+        Build from default placeholder, to example with
+        `extract_element()`.\
+    -   Exercise: Replace default expectation with `expect_equal()`
+        expectations of `extract_element()`.
+    -   Text: Other expectations, near but not exactly a certain value,
+        type/size of output, a side effect (e.g. an error). Point to
+        https://testthat.r-lib.org/reference/index.html#section-expectations.
+    -   Code: `expect_equal(tolerance = )`, with same test of
+        `fit_zipfs()` from py-rse.
+    -   Exercise: Add another expectation that tests the error handling
+
+-   CRAN checks
+
+    -   Text: Explain what is CRAN
+        -   I believe it isn't defined before in the book.
+    -   Text: Explain why CRAN needs "checks"
+    -   Text: Explain the importance of passing a CRAN check even if the
+        package is not available on CRAN
+    -   Text: Explain what does CRAN look in when performing a check
+    -   Text: Explain the output of a CRAN check
+    -   Code: `devtools::check()`
+    -   Exercise: Present an error with CRAN check that has not been
+        previously seen in the book and have the learners find the
+        solution
+        -   This will be expanded in detail once all of the chapters
+            have been outlined
+
+CRAN, the Comprehensive R Archive Network (https://cran.r-project.org/)
+defines itself as:
+
+> a network of ftp and web servers around the world that store
+> identical, up-to-date, versions of code and documentation for R
+
+What this means in practice is that CRAN is a package repository for R
+packages. As of March 2022, it contains over 19,000 of these packages.
+CRAN provides these packages as source code for Linux distributions and
+as compiled binaries for macOS and Windows. These compiled binaries
+substantially improve the speed of installation of the packages. Now, as
+a package repository, CRAN has a policy to ensure that packages meet a
+certain level of quality before they are accepted into the repository.
+This policy is known as the CRAN Repository Policy. It is important to
+be familiar with the policy as it informs best practices and
+requirements about R package developement, even if your package is not
+going to be hosted in CRAN. However, most folks don't try to comply with
+the policy manually and instead use a tool called a `check`.
+
+These checks verify that the package has:
+
+-   Tests
+-   Documentation
+-   Proper Metadata
+-   Dependency Tracking
+
+among other things.
+
+To-Do: Explain the output of a CRAN check
+
+## exercise
+
+Complete these tasks as part of the package for your first project
+assignment. Refer to the project assignment TODO: Add ref to assignment
+here? for more details. As with the other final exercises, we will use
+the `kenyaweather` package as an example and reference. Don't forget to
+add and commit any changes you've made into the Git history after each
+task, and pushing to GitHub.
+
+1.  Open one of your R scripts (if you have more than one) in the `R/`
+    folder.
+
+    -   In the R Console, type out `use_test()` to create a unit test
+        for the script.
+
+2.  Create one test for each of your functions in your package. You
+    should include tests that:
+
+    -   confirm the type of the output
+    -   confirm the size of the output
+    -   confirm the values in the output (based on a controlled input)
+    -   confirm the correct error messages are received when bad input
+        is given
+
+3.  Run `test()` in your R Console (or `Ctrl-Shift-T` while in RStudio).
+
+4.  Check your code coverage in your package with `package_coverage()`.
+    Add at least two tests to improve your code coverage. of
+    `extract_element()`.
+
+::: callout-note
+## Reading task: \~4 minutes
+
+TODO: Reading text
+:::
+
+## Exercise: TODO: Add title
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+## Summary
+
+-   TODO: List of summary items
+
