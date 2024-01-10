@@ -6,7 +6,14 @@ project:
 
 book:
   title: Testing
-  author: Luke W. Johnston
+  author:
+    - Luke W. Johnston
+    - Signe
+    - Roger
+    - Anders
+    - Omar
+    - Nuria
+    - Cecilia
   date: last-modified
   repo-url: https://github.com/rostools/r-cubed
   chapters:
