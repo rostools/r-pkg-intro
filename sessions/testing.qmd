@@ -58,7 +58,7 @@
     -   Text: Explain the importance of passing a CRAN check even if the
         package is not available on CRAN
     -   Text: Explain what does CRAN look in when performing a check
-    -   Text: Explain the output of a CRAN check
+    -   Text: Explain the output of a CRAN check (R CMD Check)
     -   Code: `devtools::check()`
     -   Exercise: Present an error with CRAN check that has not been
         previously seen in the book and have the learners find the
