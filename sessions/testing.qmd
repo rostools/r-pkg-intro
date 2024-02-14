@@ -29,7 +29,7 @@
 
     -   Text: How do we know our code is correct? So far, informal
         testing with examples. Load functions, run example code, examine
-        output. Formal testing automates this.
+        output. Formal testing automates this + ensures that when you further develop your code, your code still works as you expect it to 
     -   Text: Getting set up to use testthat.
     -   Code: `use_test()`, `test_file()` (and "Run tests" button in
         RStudio IDE)
