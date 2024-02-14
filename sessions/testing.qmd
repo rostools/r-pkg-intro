@@ -1,4 +1,4 @@
-# Checking correctness of code
+# Formal Testing: Checking the Correctness of Your Code
 
 -   Unit test (with testthat)
     -   While in R script, `use_test()` will create one automatically
