@@ -8,6 +8,15 @@
 
 <!-- TODO: Add an introduction here -->
 
+Like any starting any project, you cannot do anything without the very
+basics: Files, folders, and their structure.
+
+The **learning outcome** for this session is that you will be:
+
+> Recognize and describe the folder and file structure for R packages
+> and to create one using the `{usethis}` package or with the RStudio
+> interface.
+
 **Session objectives**:
 
 -   Identify when and why to create an R package.
