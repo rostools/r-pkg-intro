@@ -1,26 +1,26 @@
 Day,Time,Session topic,icon,link
 Day 1,9:30,Arrival. Coffee and snacks,mug-hot,
 Day 1,10:00,Introduction to the course,person-chalkboard,../sessions/introduction.html
-Day 1,10:30,Package setup,laptop-code,
+Day 1,10:30,Package setup,laptop-code,../sessions/package-setup.html
 Day 1,12:30,Lunch,utensils,
 Day 1,13:15,Networking and social activity,user-group,../appendix/social.qmd#social-day-one
-Day 1,13:35,Package setup,laptop-code,
+Day 1,13:35,Package setup,laptop-code,../sessions/package-setup.html
 Day 1,14:45,Break with coffee and snacks,mug-hot,
-Day 1,15:00,Function development in a package environment,laptop-code,
+Day 1,15:00,Function development in a package environment,laptop-code,../sessions/function-development.html
 Day 1,16:30,End-of-day short survey,comment-dots,
-Day 2,9:00,Documenting functions,laptop-code,
+Day 2,9:00,Documenting functions,laptop-code,../sessions/documenting-functions.html
 Day 2,10:15,"Break with coffee, tea, and snacks",mug-hot,
-Day 2,10:30,Creating formal tests of functions,laptop-code,
+Day 2,10:30,Creating formal tests of functions,laptop-code,../sessions/testing.html
 Day 2,12:30,Lunch,utensils,
 Day 2,13:15,Networking and social activity,user-group,../appendix/social.qmd#social-day-two
-Day 2,13:35,Debugging issues in your functions,laptop-code,
+Day 2,13:35,Debugging issues in your functions,laptop-code,../sessions/debugging.html
 Day 2,14:45,Break with coffee and snacks,mug-hot,
-Day 2,15:00,Automated and independent testing ,laptop-code,
+Day 2,15:00,Automated and independent testing ,laptop-code,../sessions/automated-testing.html
 Day 2,16:30,End-of-day short survey,comment-dots,
-Day 3,9:00,Writing usage and guide documents,laptop-code,
+Day 3,9:00,Writing usage and guide documents,laptop-code,../sessions/writing-guides.html
 Day 3,10:15,Break with coffee and snacks,mug-hot,
-Day 3,11:00,Creating a package website,laptop-code,
+Day 3,11:00,Creating a package website,laptop-code,../sessions/creating-website.html
 Day 3,12:30,Lunch,utensils,
-Day 3,13:15,Project work,user-group,
+Day 3,13:15,Project work,user-group,../appendix/project.html
 Day 3,16:00,Closing remarks,person-chalkboard,../sessions/what-next.html
 Day 3,16:30,End-of-course short survey and farewell,comment-dots,
