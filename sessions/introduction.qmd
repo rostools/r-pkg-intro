@@ -19,6 +19,12 @@ The slides contain speaking notes that you can view by pressing 'S' on
 the keyboard.
 :::
 
+objectives:
+
+-   why it can be very powerful and useful to create even a simple one.
+
+-   Identify when and why to create an R package.
+
 ## The Big Picture
 
 <!-- TODO: Add text highlighting the bigger picture of why we teach this. -->
@@ -78,3 +84,44 @@ Diagram of workflow:
     and write usage docs as you go along.
 -   Build website.
 -   Use Git and GitHub with automated actions.
+
+## Why create an R package?
+
+The main aim of developing software is to simplify some task or a set of
+tasks for yourself and for others (such as your team if you have one).
+This applies to software development in R as well. Creating an R package
+is one of the more powerful ways of simplifying tasks, no matter how
+simple or complex to begin with.
+
+We will show throughout this book that creating and developing an R
+package isn't as difficult as it might first sound. But before making a
+package, there's a few things to think about. For instance, how do you
+determine if you should make an R package? Ask these questions to
+yourself. Have you ever made a function, no matter how simple? Have you
+ever used that function more than once across more than one project or
+file, either by copying and pasting it or by sourcing the file that
+contains it? If you answered yes to these two questions, than you should
+make an R package for that function. But you might wonder, why make a
+package with only one function? Because it never stops with *just* one
+function, you will very likely be making more in your work. Aside from
+packaging up R functions, if you have small to medium sized datasets
+that you use across multiple projects or files, you can even package up
+the data too.
+
+Aside from a "yes" to these questions, making an R package now is much
+easier than it was in the past. That's largely thanks to R packages like
+`{devtools}` and `{usethis}` that are designed to simplify developing R
+packages. Combined with these packages, there are also so many free,
+online books and resources for learning how to make R packages and doing
+software development in R (see @sec-resources).
+
+If we go back to the big picture in the preface in Section
+@sec-big-picture, creating an R package, either posted on GitHub or
+submitted to CRAN, that is connected to a specific scientific work
+project or analysis will usually fulfill the reproducibility and open
+science components of research. That's because making an R package
+usually requires a higher level of rigor, testing, documentation, and
+inspection of the code, meaning you and others can have more trust in
+the results. And if its on GitHub, it's much easier to share your work
+with others and have a bigger impact on research overall.
+
