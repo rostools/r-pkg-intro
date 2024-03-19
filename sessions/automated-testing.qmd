@@ -12,7 +12,8 @@
 
 **Session objectives**:
 
--   Deploy a GitHub Action that runs a continuous integration workflow
+-   Deploy a GitHub Action that runs CMD Check
+-   Deploy a GitHub Action that runs test coverage
 
 ## TODO: Section
 
