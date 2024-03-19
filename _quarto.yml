@@ -5,17 +5,21 @@ project:
   #   - slides/*.html
 
 book:
-  title: Testing
+  title: Intro R Package Development
+  subtitle: An introductory course on building R packages
+  description: A 3-day course for researchers that introduces how to build an R package that they and their colleagues can install and use.
   author:
-    - Luke W. Johnston
-    - Signe
-    - Roger
-    - Anders
-    - Omar
-    - Nuria
-    - Cecilia
+    - name: Luke W. Johnston
+      orcid: 0000-0003-4169-2616
+      corresponding: true
+    - name: Signe Kirk Brødbæk
+    - name: Roger Moreno Justicia
+    - name: Anders Askeland
+    - name: Anders Aasted Isaksen
+    - name: Omar Silverman
   date: last-modified
-  repo-url: https://github.com/rostools/r-cubed
+  repo-url: https://github.com/rostools/r-pkg-intro
+  site-url: https://r-pkg-intro.rostools.org
   chapters:
     - index.qmd
     - part: "Preamble"
@@ -26,9 +30,17 @@ book:
     - part: "Sessions"
       chapters:
       - sessions/introduction.qmd
-      - sessions/lesson.qmd
+      - sessions/package-setup.qmd
+      - sessions/function-development.qmd
+      - sessions/documenting-functions.qmd
+      - sessions/testing.qmd
+      - sessions/debugging.qmd
+      - sessions/automated-testing.qmd
+      - sessions/writing-guides.qmd
+      - sessions/creating-website.qmd
       - sessions/what-next.qmd
   appendices:
+    - appendix/project.qmd
     - appendix/social.qmd
     - appendix/for-instructors.qmd
     - appendix/references.qmd
@@ -40,7 +52,10 @@ book:
         href: "https://guides.rostools.org/conduct.html"
 
 format:
-  r3-theme-html: default
+  r3-theme-html:
+    include-before-body:
+      - includes/contribute.html
+      # TODO: Add Goat counter.
 
 editor:
   markdown:
