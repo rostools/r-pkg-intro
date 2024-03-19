@@ -15,8 +15,7 @@
 
 **Session objectives**:
 
--   Gain an understanding of the usefulness and importance of 
-    formal testing
+-   Explain what "testing" means when developing packages, describe how they are structured, and construct simple tests of functions. 
 -   Add a formal test of a package function using testthat
 -   Describe an expectation using an `expect_xxx()` function
 -   Run all the tests for a file in `R/`
