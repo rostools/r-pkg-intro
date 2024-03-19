@@ -1,4 +1,6 @@
 {
+    "quarto.visualEditor.markdownWrap": "column",
+    "quarto.visualEditor.markdownWrapColumn": 72,
     "conventional-branch.type": [
       "build", // Changes that affect the build system or external dependencies
       "ci", // Changes to our CI configuration files and scripts
