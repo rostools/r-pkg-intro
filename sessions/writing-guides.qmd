@@ -8,10 +8,20 @@
 
 <!-- TODO: Add an introduction here -->
 
+I tried to be as hierarchical as possible, starting from the main goal
+of the session and listing the concepts/skills needed to fulfill that
+objective. What do you think?
+
 **Session objectives**:
 
--   Create a README and vignette for package documentation
--   Ensure that documentation is consistent with up-to-date style
+-   MAIN: Learn how to create a README and vignette for package
+    documentation
+    -   Understand what is code documentation and why is it needed when
+        developing packages or any code-based work
+    -   Understand the different roles of a README and a vignette
+    -   Learn how to find and extract existing documentation from any
+        published R package
+-   MAIN: Ensure that documentation is consistent with up-to-date style
     guidelines using `{styler}`
 
 ## TODO: Section
