@@ -20,10 +20,12 @@ The overall objective for this session is to:
     describe how they are structured, and construct simple tests of 
     functions. 
 
+More specific objectives are to:
+-   Add formal tests of a package function using `testthat`
 -   Describe an expectation using an `expect_xxx()` function
 -   Run all the tests for a file in `R/`
--   Implement the workflow to validate an R package locally
--   Gain an understanding of what can is CRAN and what CRAN checks
+-   Implement a workflow to validate an R package locally
+-   Explain what CRAN is and conduct CRAN checks
 
 ## TODO: Section
 
