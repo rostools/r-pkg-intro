@@ -12,21 +12,21 @@
 
 The overall **learning outcome** for this session is:
 
-1.  Describe how an R package looks like and apply
+1.  Describe how an R package looks like and create a basic package
+    setup using tools that help streamline and assist with these initial
+    tasks.
 
 Specific **objectives** are:
 
-1.  Describe what a basic R package "physically" looks like
-
--   Learn about and use the R packages `{devtools}` and `{usethis}` to
-    automate and streamline many package development tasks.
--   Learn how to create a new R package using
-    `usethis::create_package()`.
--   Describe and explain the purpose of the folders and files in a
-    skeleton R package.
--   Describe what are global defaults in R and how to use them to make
-    package development a bit easier.
--   Learn how and why you might add data to an R package.
+1.  Describe what a basic R package "physically" looks like, what the
+    required files and folders, and what their purpose is.
+2.  Use the `{usethis}` and `{devtools}` packages to create a basic R
+    package.
+3.  Describe a common R package development workflow and modify RStudio
+    and R settings to simplifying this workflow.
+4.  List the different locations data can be stored in a package and
+    identify and explain when to include it. Use `{usethis}` functions
+    to create and store data to the relevant location.
 
 ## Devtools
 
