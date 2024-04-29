@@ -28,13 +28,14 @@ package, documenting them, and how to stop your functions with an error.
 -   To use `@examples` to help with creating function?
 -   Function documentation (with roxygen2), part 1?
 
-**Session objectives**:
+**Learning objectives**:
 
--   Convert a chunk of R code into a function
--   Include a function in an R package
--   Provide basic function documentation using Roxygen
--   Use functions from other packages in a function in your own package
--   Return an error message from a function
+-   Convert your R code into a function
+-   Make your function modular and reusable
+-   Understand dependecy management and use functions from other
+    packages in your own package
+-   Learn and use process control to return error messages from a
+    function
 
 ## TODO: Section
 
