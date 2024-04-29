@@ -8,10 +8,13 @@
 
 <!-- TODO: Add an introduction here -->
 
-**Session objectives**:
+**Learning objectives**:
 
--   Describe the purpose of documenting code and packages
--   Document functions with `{roxygen2}`
+-   Understand the purpose of documenting functions in your package
+
+-   Learn to document functions using {roxygen2}
+
+-   Learn how to create examples within documentation
 
 ## Documenting Functions
 
