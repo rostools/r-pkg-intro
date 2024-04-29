@@ -2,6 +2,16 @@
 
 {{< include ../includes/_wip.qmd >}}
 
+## Learning objectives
+
+The overall learning outcome for this session is:
+
+1.  Explain the why it can be very powerful and useful to create even a
+    simple one.
+2.  Identify when and why to create an R package.
+
+## Presentation slides
+
 > [**Introduction slides**](../slides/introduction.html)
 
 <div>
@@ -18,12 +28,6 @@
 The slides contain speaking notes that you can view by pressing 'S' on
 the keyboard.
 :::
-
-objectives:
-
--   why it can be very powerful and useful to create even a simple one.
-
--   Identify when and why to create an R package.
 
 ## The Big Picture
 
