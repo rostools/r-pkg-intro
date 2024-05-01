@@ -14,7 +14,7 @@
 
 The overall objective for this session is to:
 -   Explain what *automated testing* means when developing packages, 
-    and deploy simple GitHub Actions to automate tests
+    and create simple GitHub Actions that will automatically run tests when new code is pushed to GitHub
 
 More specific objectives are to:
 -   Deploy a GitHub Action that runs CMD Check
