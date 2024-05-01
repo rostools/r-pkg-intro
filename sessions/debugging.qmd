@@ -10,82 +10,70 @@
 
 Debugging is one of activities that seems really scary and difficult,
 but once you try it and use it, is not nearly as intimidating as it
-seemed. To debug, which means to find and fix problems in your code,
-there are several ways, e.g. simply adding 'breakpoints', `print()` or
-`stop()` calls to your code, or by using the interactive debugger. All
-these methods help you stop and/or inspect the code during its
-execution, which is very helpful if you suspect there is a problem in
-the code.
+seemed. In this session we will focus on using RStudio's interactive
+debugger to debug code.
 
 **Session objectives**:
 
--   Identify where the debugger tool is in RStudio and apply it to debug functions that cause issues.
--   Learn how and when to use `print()` and `stop()` calls to make
-    debugging your code easier.
--   Learn how to interpret the `traceback()` error messages to find
-    which function is causing the error *Too much/too advanced?*
+-   Understand what debugging is.
+-   Identify how the debugger tool is started in RStudio, what it looks
+    like and apply it to debug functions that cause issues.
+-   Understand `traceback()` error messages to identify which function
+    is causing an error.
+-   Apply `stop()` statements to your functions to protect users from
+    unexpected behavior.
 
-## TODO: Section
+## What is debugging?
 
-### Debugging using the RStudio debugger
+Debugging is the process of analyzing a section of code in order to
+identify and fix problems related to that code. In addition to looking
+at the code itself, debugging often involves analyzing the input and
+output of that code, since unexpected behavior can be caused by
+unexpected input data.
 
-(Content is a copy/paste from intermediate course appendix C for now)
+Even without using dedicated debugging tools, you have probably done a
+lot of debugging already. You may have had a line of code that produced
+an error or gave an unexpected output, which you managed to fix using
+trial and error and manually inputting different values and inspecting
+the output. There is nothing wrong with this approach, but if you build
+your data analysis workflow around custom functions, the debugging
+process can be made a lot more efficient by using dedicated tools, such
+as RStudio's debugger and `traceback()`.
 
-Of of the simplest way to debug is to insert the `browser()` function
-into the the start of your function, re-running the function by either
-manually running it or using source with {{< var keybind.source >}}, and
-using it again.
+If you've ever gotten an error in RStudio, you've probably been just a
+single click away from starting the debugger or calling `traceback()`.
+After this session, you will be able to use both:
 
-For instance, we have a function like this, which returns the double of
-the input minus the squareroot of the input:
+![Placeholder image from
+adv-R](https://d33wubrfki0l68.cloudfront.net/725810117d43af1ab9b5455766afdd255d551304/4b747/screenshots/debugging/rstudio-error.png)
 
-```{r}
-my_function <- function(number) {
-  double_of_number <- number + number
-  number_squareroot <- sqrt(number)
-  return(double_of_number - number_squareroot)
-}
+## Debugging with the RStudio debugger
+
+The RStudio debugger allows you to pause the execution of a function and
+advance step-by-step through the function while it is executing. In the
+debugger, you can inspect and modify objects inside the function
+environment at each step. This is great for understanding why an error
+or unexpected output occurs.
+
+### How to start the debugger
+
+-   There are many different ways to start the debugger in R:
+    -   "Rerun with Debug"
+    -   Insert `browser()` statement inside functions
+    -   Wrapping a function call inside a `debug()` inserts a
+        `browser()` statement at the top line inside the function. This
+        can be removed by wrapping the same function inside `undebug()`
+        (using `debugonce()` is usually more convenient as it removes
+        the browser statement automatically)
+    -   `options(error = browser)`
+
+### What the debugger looks like
+
+```{=html}
+<!--#TODO:
+Insert screenshot/video and go over buttons & hotkeys
+-->
 ```
-
-When you use this function, it usually works without a problem, but some
-times it returns `NaN` with a warning. Since this is a small toy
-function with a helpful warning message, you may be able to spot the
-location of the issue right away, but you may not always be so lucky.
-The debugger can always help you, so let's use it to find out where the
-problem arises in the function!
-
-To start the debugger, you can either insert the `browser()` function
-into the function itself:
-
-```{r, eval=FALSE}
-test_debugging <- function(number) {
-  browser()
-  double_of_number <- number + number
-  number_squareroot <- sqrt(number)
-  return(double_of_number - number_squareroot)
-  
-}
-```
-
-And re-run and use the function again, which will pop up a new debugging
-panel in RStudio whenever the function is called.
-
-Alternatively, you can start the debugger by wrapping a function (even a
-function that you did not write) within a `debugonce()` call, which will
-run that function in the debugger the next time it is called:
-
-```{r, eval=FALSE}
-debugonce(my_function)
-my_function(2)
-}
-```
-
-Sadly, we can't show this on the website since it only works in RStudio
-(we may add a video as some point). When you are in the debugger will
-open up and it will show a few things:
-
-<!-- TODO: eventually add an image or video.. but for next year. -->
-
 **Describe the debugger environment:**
 
 -   What's different from the normal environment
@@ -109,14 +97,94 @@ open up and it will show a few things:
 
 -   The Environment pane will be empty and will say "Traceback".
 
-<!-- TODO: Add image or video of this or extend it from previous video? -->
+### Using the debugger
 
+```{=html}
+<!--#TODO:
+Maybe add a more complex example with a less informative error message, similar to the long call stack example from adv-R
+-->
+```
+We might have a function like this, which returns the double of the
+input minus the squareroot of the input:
+
+```{r, eval=FALSE}
+my_function <- function(number) {
+  double_of_number <- number + number
+  number_squareroot <- sqrt(number)
+  return(double_of_number - number_squareroot)
+}
+```
+
+When you use this function, it usually works without a problem, but some
+times it returns `NaN` with a warning. Since this is a small toy
+function with a helpful warning message, you may be able to spot the
+location of the issue right away, but you may not always be so lucky.
+The debugger can always help you, so let's use it to find out where the
+problem arises in the function!
+
+Let's start the debugger by inserting a `browser()` statement inside the
+function:
+
+```{r, eval=FALSE}
+test_debugging <- function(number) {
+  browser()
+  double_of_number <- number + number
+  number_squareroot <- sqrt(number)
+  return(double_of_number - number_squareroot)
+}
+```
+
+And re-run and use the function again, which will start up the debugger
+whenever the function is called. Now we can inspect the number variable
+in the function environment, and we can change it and see what happens
+to the output. It quickly becomes clear which part of the code is
+causing the `NA` outputs and why it is causing them.
+
+## Using stop()
+
+By default, R is quite forgiving about accepting inputs, even those that
+might not be the intended type. Even when it might not make much sense,
+R will try its best to use the inputs and run the function you ask it
+to.
+
+In the above example, we got a warning with an informative message
+related to the `NAs` produced by the `sqroot()` function, but sometimes
+it might be best to return an error and stop the code from executing, or
+to add a specific error message. The `stop()` function allows you to do
+just that, and helps the user start the debugger in the area of the code
+and environment that caused the error. This can be very helpful to
+"future you" or other users, so consider where a `stop()` call can
+protect users from unexpected behavior when your are making custom
+functions.
+
+```{r, eval=FALSE}
+test_debugging <- function(number) {
+  double_of_number <- number + number
+    if(number < 0) {
+    stop("Input number is negative, can't compute square root")
+  }
+  number_squareroot <- sqrt(number)
+  
+  return(double_of_number - number_squareroot)
+}
+```
+
+#### Exercise ideas
+
+-   Start the debugger without using the browser function
+-   A more complex debugging case (a la "palindrome" function example)
+-   Add stop() to make debugging easier.
+
+```{=html}
+<!--#TODO:
+Exercise idea: start the debugger without using the browser() function
+E.g.
+debugonce(my_function)
+my_function(2)
+}
+-->
+```
 <!-- TODO: Image of debugging changes, with descriptions -->
-
-In this mode you can really investigate what is happening with your code
-and how to fix it. The way to figure out what's wrong is by running the
-code bit by bit. This debug environment is empty except for the actions
-that occur within it, so it really can help figure things out.
 
 **From RSE**:
 
@@ -162,11 +230,29 @@ TODO: Reading text
 #| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
 ```
 
+## Alternatives to the debugger
+
+Other debugging methods include adding 'breakpoints' or `print()`
+statements to your code, which allow you to stop the code execution or
+print values at specific points during the code execution. Although
+these tools don't allow you to interact with the code to the same extent
+as the debugger, they can be useful. They're described in the links
+provided in the *Resources for further reading* below.
+
 ## Summary
 
 -   TODO: List of summary items
 
 ## Resource for further reading
 
-https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE
+[Advanced R, Chapter 22:
+Debugging](https://adv-r.hadley.nz/debugging.html)
 
+[Video: Introduction to debugging in
+RStudio](https://vimeo.com/99375765)
+
+[What They Forgot to Teach You About R, Chapter 13: Debugging
+R](https://rstats.wtf/debugging-r)
+
+[RStudio debugging
+documentation](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE)
