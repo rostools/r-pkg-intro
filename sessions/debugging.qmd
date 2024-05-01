@@ -19,8 +19,7 @@ the code.
 
 **Session objectives**:
 
--   Learn how to use RStudio's interactive debugger to explore
-    unexpected behavior in your code.
+-   Identify where the debugger tool is in RStudio and apply it to debug functions that cause issues.
 -   Learn how and when to use `print()` and `stop()` calls to make
     debugging your code easier.
 -   Learn how to interpret the `traceback()` error messages to find
