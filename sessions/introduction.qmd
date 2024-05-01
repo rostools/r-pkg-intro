@@ -19,9 +19,9 @@ The slides contain speaking notes that you can view by pressing 'S' on
 the keyboard.
 :::
 
-objectives:
+Learning objectives:
 
--   why it can be very powerful and useful to create even a simple one.
+-   Why it can be very powerful and useful to create even a simple R package.
 
 -   Identify when and why to create an R package.
 
@@ -93,14 +93,17 @@ This applies to software development in R as well. Creating an R package
 is one of the more powerful ways of simplifying tasks, no matter how
 simple or complex to begin with.
 
-We will show throughout this book that creating and developing an R
+We will show throughout this course that creating and developing an R
 package isn't as difficult as it might first sound. But before making a
 package, there's a few things to think about. For instance, how do you
-determine if you should make an R package? Ask these questions to
-yourself. Have you ever made a function, no matter how simple? Have you
-ever used that function more than once across more than one project or
-file, either by copying and pasting it or by sourcing the file that
-contains it? If you answered yes to these two questions, than you should
+determine if you should make an R package? Ask yourself these questions:
+
+- Have you ever made a function, no matter how simple? 
+- Have you ever used that function more than once across more than one 
+  project or file, either by copying and pasting it or by sourcing the file
+  that contains it? 
+
+If you answered yes to these two questions, then you should
 make an R package for that function. But you might wonder, why make a
 package with only one function? Because it never stops with *just* one
 function, you will very likely be making more in your work. Aside from
