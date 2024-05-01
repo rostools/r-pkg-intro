@@ -11,10 +11,9 @@
 **Learning objectives**:
 
 -   Understand the purpose of documenting functions in your package
-
 -   Learn to document functions using {roxygen2}
-
--   Learn how to create examples within documentation
+-   Learn how to create and run examples within documentation
+-   Automatically generate package documentation using {devtools}
 
 ## Documenting Functions
 
