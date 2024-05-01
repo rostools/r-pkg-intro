@@ -12,7 +12,7 @@ engineering tends to focus on developing applications with a commercial
 purpose, while learning material targeted to researchers or data
 scientists tends to focus on coding in relation to writing papers, doing
 statistical analyses, or making figures. But there aren't many courses
-or resources for researchers that focuses on the inbetween: Building
+or resources for researchers that focus on the in-between: Building
 software to help explore problems and answer questions. This course and
 educational resource covers the fundamentals of creating an R package as
 part of your research cycle, whether you work alone or as part of a
@@ -21,9 +21,9 @@ team.
 Our overall **learning outcome** is that at the end of this material,
 learners will be able to:
 
-> Explain how an R package is set up, organized, developed, and tested,
-> and to create a simple R package that can be installed on their own
-> (or a colleagues') computer.
+> Explain how an R package is set up, organized, developed, and tested, 
+> and create a simple R package that can be installed on their own 
+> (or a colleague's) computer.
 
 Our specific **learning objectives** are to:
 
@@ -45,9 +45,9 @@ Our specific **learning objectives** are to:
 ## Is this course for you?
 
 We designed the course with the following characteristics of learners
-like you in mind as the type of people who would be interested in and
+in mind as the type of people who would be interested in and
 want to take this course. We **don't** assume learners to have all or
-even most of these characteristics, we only use these as a guide for
+even most of these characteristics. We only use these as a guide for
 structuring and developing this material as well as to help manage your
 expectations of the course.
 
@@ -71,6 +71,7 @@ expectations of the course.
     services like [GitHub](https://github.com/).
 -   Wants to get into doing more research software
     development/engineering.
+-   Wants to increase the reproducibility and usability of the code they produce
 
 Many of the core concepts, skills, and knowledge covered in this course
 are built on what was taught in the introductory, intermediate, and
