@@ -6,22 +6,30 @@
 #| include: false
 ```
 
-**Introduction**
-
 Debugging is one of activities that seems really scary and difficult,
 but once you try it and use it, is not nearly as intimidating as it
 seemed. In this session we will focus on using RStudio's interactive
 debugger to debug code.
 
-**Session objectives**:
+## Learning objectives
 
--   Understand what debugging is.
--   Identify how the debugger tool is started in RStudio, what it looks
-    like and apply it to debug functions that cause issues.
--   Understand `traceback()` error messages to identify which function
-    is causing an error.
--   Apply `stop()` statements to your functions to protect users from
-    unexpected behavior.
+The overall learning outcome of this session is to:
+
+-   Explain the concept of debugging in package development and apply
+    formal tools and workflows within R and RStudio.
+
+Specific objectives are:
+
+-   Explain debugging in the context of package development, and compare
+    formal vs informal workflows for debugging.
+-   Identify how to start the debugger tool in RStudio, what it looks
+    like when it is running, and use it to debug functions that cause
+    issues.
+-   Navigate and explain some basic `traceback()` error messages to help
+    identify which function is causing an error.
+-   Describe how "defensive programming" can help reduce errors and
+    inform where errors may occur by applying functions from the
+    `{checkmate}` and `{cli}` packages.
 
 ## What is debugging?
 
@@ -160,11 +168,11 @@ functions.
 ```{r, eval=FALSE}
 test_debugging <- function(number) {
   double_of_number <- number + number
-    if(number < 0) {
+  if (number < 0) {
     stop("Input number is negative, can't compute square root")
   }
   number_squareroot <- sqrt(number)
-  
+
   return(double_of_number - number_squareroot)
 }
 ```
