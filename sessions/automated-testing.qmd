@@ -1,4 +1,4 @@
-# TODO: Lesson title here
+# Automatically test your package {#sec-automated-testing}
 
 {{< include ../includes/_wip.qmd >}}
 
@@ -8,17 +8,29 @@
 
 <!-- TODO: Add an introduction here -->
 
--   Continuous integration using GitHub Actions
+## Learning objectives
 
-**Session objectives**:
+The overall learning outcome for this session is to:
 
-The overall objective for this session is to:
--   Explain what *automated testing* means when developing packages, 
-    and create simple GitHub Actions that will automatically run tests when new code is pushed to GitHub
+-   Explain the meaning of continuous integration and *automated
+    testing* in the context of developing R packages and set up the
+    automation infrastructure.
 
-More specific objectives are to:
--   Create a GitHub Action that runs CMD Check
--   Create a GitHub Action that runs test coverage
+Specific objectives are to:
+
+-   Describe the meaning of continuous integration (CI), how automated
+    testing connects to it, and both of their roles in effective
+    development of R packages.
+-   Explain how GitHub Actions are a form of CI and how they they fit
+    within the R package development workflow.
+-   Set up a file by using the `{usethis}` package that tells GitHub
+    Actions to automatically test and run checks on your package
+    whenever you push code to GitHub.
+-   Navigate the logs of the GitHub Actions to assess errors, warnings,
+    and other messages that may arise during the automated testing
+    process.
+
+TODO: Include section on test coverage?
 
 ## TODO: Section
 
