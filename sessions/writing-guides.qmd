@@ -1,4 +1,4 @@
-# Developing documentation and tutorials on usage {#package-documentation}
+# Writing documentation and guides for your package {#sec-writing-guides}
 
 {{< include ../includes/_wip.qmd >}}
 
@@ -8,22 +8,25 @@
 
 <!-- TODO: Add an introduction here -->
 
-<!--#
-I tried to be as hierarchical as possible, starting from the main goal
-of the session and listing the concepts/skills needed to fulfill that
-objective. What do you think?
--->
+## Learning objectives
 
-**Session objectives**:
+The overall learning outcome of this session is to:
 
--   Learning outcome: Describe the different types of documentation and explain when and why to use them. Use this knowledge to create two types of documentation within the context of an R package.
-    -   Understand what is code documentation and why is it needed when
-        developing packages or any code-based work
-    -   Understand the different roles of a README and a vignette
-    -   Learn how to find and extract existing documentation from any
-        published R package
--   MAIN: Ensure that documentation is consistent with up-to-date style
-    guidelines using `{styler}`
+-   Describe the different types of documentation and explain when and
+    why to use each of them. Use this knowledge to create two types of
+    documentation within the context of an R package.
+
+Specific learning objectives are to:
+
+-   Explain the purpose of a properly written README file and use the
+    `{usethis}` package to create one.
+-   Explain the purpose of writing vignettes for your package, the
+    different types of vignettes available, and create some using the
+    `{usethis}` package.
+-   Use the `{spelling}` package to ensure there are no major spelling
+    issues in the documentation of your package.
+-   Describe where to look within R as well as outside of R to find
+    longer-form documentation of a package.
 
 ## TODO: Section
 
