@@ -8,14 +8,15 @@
 
 <!-- TODO: Add an introduction here -->
 
+<!--#
 I tried to be as hierarchical as possible, starting from the main goal
 of the session and listing the concepts/skills needed to fulfill that
 objective. What do you think?
+-->
 
 **Session objectives**:
 
--   MAIN: Learn how to create a README and vignette for package
-    documentation
+-   Learning outcome: Describe the different types of documentation and explain when and why to use them. Use this knowledge to create two types of documentation within the context of an R package.
     -   Understand what is code documentation and why is it needed when
         developing packages or any code-based work
     -   Understand the different roles of a README and a vignette
