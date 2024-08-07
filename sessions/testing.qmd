@@ -113,6 +113,8 @@ These checks verify that the package has:
 
 among other things.
 
+TODO: Explain the output of a CRAN check
+
 ## Exercise: Create your first unit test
 
 
