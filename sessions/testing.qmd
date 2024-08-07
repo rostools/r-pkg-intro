@@ -13,19 +13,32 @@
 
 <!-- TODO: Add an introduction here -->
 
-**Session objectives**:
+## Learning objectives
 
-The overall objective for this session is to:
--   Explain what *formal testing* means when developing packages, 
-    describe how they are structured, and construct simple tests of 
-    functions. 
+The overall **learning outcome** for this session is:
 
-More specific objectives are to:
--   Add formal tests of a package function using `testthat`
--   Describe an expectation using an `expect_xxx()` function
--   Run all the tests for a file in `R/`
--   Implement a workflow to validate an R package locally
--   Explain what CRAN is and conduct CRAN checks
+1.  Explain what *formal testing* means when developing packages,
+    describe how they are structured, and construct simple tests of
+    functions.
+
+Specific **objectives** are:
+
+1.  Explain the difference between informal testing and formal testing,
+    as well as the different types of formal testing when developing R
+    packages.
+2.  Describe the basic structure of a common type of test called unit
+    testing, in particular on how tests check for *expectations* of what
+    outputs a function should return.
+3.  Identify and explain optimal types of expectations to write for
+    tests of a function.
+4.  Use the `{testthat}` package to create a unit test for functions in
+    your package and write function expectations using the `expect_*()`
+    functions (e.g. `expect_equal()` or `expect_length()`).
+5.  Use RStudio keybindings (or `{devtools}` functions) to run one or
+    more tests for a package.
+6.  Review what CRAN is and describe how CRAN establishes standards for
+    how R packages are structured, tested, and checked. Use `{devtools}`
+    to run a CRAN check on your package.
 
 ## TODO: Section
 
@@ -33,7 +46,9 @@ More specific objectives are to:
 
     -   Text: How do we know our code is correct? So far, informal
         testing with examples. Load functions, run example code, examine
-        output. Formal testing automates this + ensures that when you further develop your code, your code still works as you expect it to 
+        output. Formal testing automates this + ensures that when you
+        further develop your code, your code still works as you expect
+        it to
     -   Text: Getting set up to use testthat.
     -   Code: `use_test()`, `test_file()` (and "Run tests" button in
         RStudio IDE)
@@ -149,4 +164,3 @@ TODO: Reading text
 ## Summary
 
 -   TODO: List of summary items
-
