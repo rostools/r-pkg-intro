@@ -1,4 +1,4 @@
-# TODO: Lesson title here
+# Documenting functions in your package {#sec-documenting-functions}
 
 {{< include ../includes/_wip.qmd >}}
 
@@ -8,12 +8,25 @@
 
 <!-- TODO: Add an introduction here -->
 
-**Learning objectives**:
+## Learning objectives
 
--   Understand the purpose of documenting functions in your package
--   Learn to document functions using {roxygen2}
--   Learn how to create and run examples within documentation
--   Automatically generate package documentation using {devtools}
+The overall **learning outcome** for this session is:
+
+-   Explain why high-quality, well-written function documentation is
+    important when creating a package intended to be used by others.
+
+Specific **objectives** are:
+
+-   Describe the purpose of function-specific documentation and identify
+    core components to include in the documentation.
+-   Use `{roxygen2}` to setup a template documentation structure and
+    then write Markdown-based documentation within that template for
+    functions.
+-   Use the examples section of the documentation to help prototype and
+    informally check that the function works. Then later write more
+    example code that highlights how to use the function.
+-   Use `{devtools}` to automatically generate package documentation
+    that can be accessible when using `?function_name`.
 
 ## Documenting Functions
 
