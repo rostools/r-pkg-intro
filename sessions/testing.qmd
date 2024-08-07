@@ -150,7 +150,7 @@ task, and pushing to GitHub.
 TODO: Reading text
 :::
 
-## Exercise: TODO: Create unit tests for the TODO functions
+## Exercise: TODO: Create unit tests for the remaining functions in your package
 
 > Time: \## minutes.
 
