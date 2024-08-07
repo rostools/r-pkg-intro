@@ -163,6 +163,7 @@ TODO: Reading text
 
 TODO: Reading text
 
+## Exercise: TODO: Run a CRAN check on the package
 
 > Time: \## minutes.
 
@@ -171,6 +172,7 @@ TODO: Reading text
 #| code-fold: true
 #| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
 ```
+
 
 ## Summary
 
