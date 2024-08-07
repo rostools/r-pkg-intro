@@ -121,7 +121,16 @@ as a final solution in order to participate in the course. For help
 setting up Posit Cloud for this course, refer to the [Posit Cloud setup
 guide](https://guides.rostools.org/posit-cloud.html).
 
-## TODO: Next section
+## Styling code
+
+TODO: Use similar text from other courses.
+
+It's possible to adhere to a style guide by remembering the rules and
+applying them yourself, but luckily there are tools that can help
+automate the boring parts. The package `{styler}` automatically formats
+code according to a specified style guide: Simply run
+`styler::style_pkg()` to format your code according to the tidyverse
+style guide by default.
 
 ## Course basics
 
