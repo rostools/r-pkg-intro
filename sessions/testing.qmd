@@ -113,9 +113,8 @@ These checks verify that the package has:
 
 among other things.
 
-To-Do: Explain the output of a CRAN check
+## Exercise: Create your first unit test
 
-## exercise
 
 Complete these tasks as part of the package for your first project
 assignment. Refer to the project assignment TODO: Add ref to assignment
