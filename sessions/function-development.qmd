@@ -28,13 +28,24 @@ package, documenting them, and how to stop your functions with an error.
 -   To use `@examples` to help with creating function?
 -   Function documentation (with roxygen2), part 1?
 
-**Session objectives**:
+## Learning objectives
 
--   Convert a chunk of R code into a function
--   Include a function in an R package
--   Provide basic function documentation using Roxygen
--   Use functions from other packages in a function in your own package
--   Return an error message from a function
+The overall **learning outcome** for this session is:
+
+1.  Review the core workflow in creating functions and describe
+    additional workflows and software development principles required to
+    formally (and effectively) develop functions within an R package.
+
+Specific **objectives** are:
+
+-   Review and apply the workflow for converting code into a function.
+-   Identify approaches and "code patterns" for writing your functions
+    that ensure they are internally self-contained and reusable.
+-   Explain what package dependency means in the context of packages and
+    how you formally manage dependencies when writing functions as part
+    of a package.
+-   Use control flow processes like `if () {} else() {}` to modify what
+    a function does based on a condition.
 
 ## TODO: Section
 
@@ -62,7 +73,7 @@ release_date_line <- str_subset(text, "Release Date: ")
 release_date <- str_remove(release_date_line, "Release Date: ")
 
 tibble(
-  author = author, 
+  author = author,
   title = title,
   release_date = release_date
 )
@@ -222,7 +233,7 @@ book_meta(dracula)
 
 ```{r sol-extract-element-dep}
 # + change to DESCRIPTION
-extract_element <- function(text, element){ 
+extract_element <- function(text, element) {
   line <- stringr::str_subset(text, element)
   value <- stringr::str_remove(line, element)
   value
