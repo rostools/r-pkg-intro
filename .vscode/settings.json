@@ -13,4 +13,7 @@
       "chore", // Misc things, like renaming or deleting files
     ],
     "conventional-branch.format": "{Type}/{Branch}",
+    "conventionalCommits.scopes": [
+      "sessions"
+    ],
   }
