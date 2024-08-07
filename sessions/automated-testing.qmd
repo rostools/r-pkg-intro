@@ -10,13 +10,13 @@
 
 ## Learning objectives
 
-The overall learning outcome for this session is to:
+The overall **learning outcome** for this session is to:
 
 -   Explain the meaning of continuous integration and *automated
     testing* in the context of developing R packages and set up the
     automation infrastructure.
 
-Specific objectives are to:
+Specific **objectives** are to:
 
 -   Describe the meaning of continuous integration (CI), how automated
     testing connects to it, and both of their roles in effective
