@@ -151,7 +151,18 @@ task, and pushing to GitHub.
 TODO: Reading text
 :::
 
-## Exercise: TODO: Add title
+## Exercise: TODO: Create unit tests for the TODO functions
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
+TODO: Reading text
+
 
 > Time: \## minutes.
 
