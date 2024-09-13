@@ -7,11 +7,15 @@
 ```
 
 <!-- TODO: Add an introduction here -->
-
--   Setting up a website (with pkgdown)
--   Customizing the themes
--   Getting all resources and material organized
--   Defining lifecycle of your package and individual functions (with
+-   Once you have created and structured your package, you might be 
+    interested in making it publicly available, so people would be 
+    able to use it. You can achieve this goal by creating a website
+    using the 'pkgdown' package.
+-   pkgdown package will make it easy to:
+-    set up a website
+-   customize the themes
+-   Get all resources and material organized
+-   Define lifecycle of your package and individual functions (with
     lifecycle)
 
 **Session objectives**:
