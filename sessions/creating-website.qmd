@@ -1,4 +1,4 @@
-# Exposing your package to the world with a website:
+# Exposing your package to the world with a website
 
 {{< include ../includes/_wip.qmd >}}
 
@@ -6,27 +6,31 @@
 #| include: false
 ```
 
-<!-- TODO: Add an introduction here -->
--   Once you have created and structured your package, you might be 
-    interested in making it publicly available, so people would be 
-    able to use it. You can achieve this goal by creating a website
-    using the 'pkgdown' package.
--   pkgdown package will make it easy to:
--    set up a website
--   customize the themes
--   Get all resources and material organized
--   Define lifecycle of your package and individual functions (with
-    lifecycle)
+## Learning objectives
 
-**Session objectives**:
+The overall **learning outcome** for this session is:
 
--   Describe the functionality `pkgdown` provides to deploy a website
-    for package documentation and then learn to use pkgdown to deploy a
-    website
--   Customize the website with pre-existing themes
--   Organize the website with vignettes, tutorials and custom pages
--   Explain a functions' lifecycle process and the tools to handle it in
-    R
+1.  Explain the main benefits to creating a website for your package,
+    describe items that are useful to communicate to (potential) users,
+    and use the `{pkgdown}` package to auto-generate a website for you
+    whenever changes are made.
+
+Specific **objectives** are:
+
+1.  Identify and list some benefits of using a website to communicate
+    details about your package.
+2.  Describe the differences between a locally created website and a
+    website hosted on a server.
+3.  Use `{pkgdown}` to generate HTML files structured as a website based
+    on your vignettes and function documentation.
+4.  Create an aesthetically pleasing (to you) website using the themes
+    in `{pkgdown}`.
+5.  Use the `{lifecycle}` package to communicate the developmental
+    maturity of your package and of individual functions, in a way that
+    also gets included on the website.
+6.  Explain the benefit to having your website automatically generated
+    whenever changes are made and use `{usethis}` and GitHub Action
+    workflows to setup up this auto-generation.
 
 ## TODO: Section
 
