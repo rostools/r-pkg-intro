@@ -161,19 +161,20 @@ See you at the course!
 Throughout the book, you will build at least two packages (maybe more
 depending on the instructor).
 
--   The main example package developed throughout the book is the Zipf's
-    Law package zipfs. This package is used for the code-alongs, the
-    actual content, and most of the exercises. Zipf's Law is a
-    fascinating result in the field of quantitative linguistics that
-    states that the second most common word in a body of text appears
-    half as often as the most common, the third most common appears a
-    third as often, and so on. To test whether Zipf's Law holds for a
+-   The main example package developed throughout the book is an R
+    package `zipfs` that counts and analyzes the word frequency
+    distribution of any arbitrary body of text. It's called `zipfs`
+    because we will use it to test whether Zipf's Law holds for a
     collection of classic novels that are freely available from Project
-    Gutenberg, we will write a software package that counts and analyzes
-    the word frequency distribution in any arbitrary body of text.
--   The example package for the first project assignment is the Weather
-    in Kenya package kenyaweather. This package is used as a reference
-    when you work on your package for the first project assignment.
+    Gutenberg. Zipf's Law is a fascinating result in the field of
+    quantitative linguistics that states that the second most common
+    word in a body of text appears half as often as the most common, the
+    third most common appears a third as often, and so on. The `zipfs`
+    package is used for the code-alongs, the actual content, and most of
+    the exercises.
+-   For the first project assignment, we'll use the `kenyaweather`
+    package, which provides weather data for Kenya, as an example for
+    when you work on developing your own package.
 
 Specific details about the project assignments are found in
 @sec-assignments. Two of the packages are completed and can be used as
