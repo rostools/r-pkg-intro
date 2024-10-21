@@ -12,21 +12,21 @@
 
 The overall **learning outcome** for this session is to:
 
--   Explain the meaning of continuous integration and *automated
+1.  Explain the meaning of continuous integration and *automated
     testing* in the context of developing R packages and set up the
     automation infrastructure.
 
 Specific **objectives** are to:
 
--   Describe the meaning of continuous integration (CI), how automated
+1.  Describe the meaning of continuous integration (CI), how automated
     testing connects to it, and both of their roles in effective
     development of R packages.
--   Explain how GitHub Actions are a form of CI and how they they fit
+2.  Explain how GitHub Actions are a form of CI and how they they fit
     within the R package development workflow.
--   Set up a file by using the `{usethis}` package that tells GitHub
+3.  Set up a file by using the `{usethis}` package that tells GitHub
     Actions to automatically test and run checks on your package
     whenever you push code to GitHub.
--   Navigate the logs of the GitHub Actions to assess errors, warnings,
+4.  Navigate the logs of the GitHub Actions to assess errors, warnings,
     and other messages that may arise during the automated testing
     process.
 
