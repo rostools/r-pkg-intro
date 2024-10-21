@@ -10,13 +10,13 @@
 
 ## Learning objectives
 
-The overall learning outcome of this session is to:
+The overall **learning outcome** of this session is to:
 
 -   Describe the different types of documentation and explain when and
     why to use each of them. Use this knowledge to create two types of
     documentation within the context of an R package.
 
-Specific learning objectives are to:
+Specific **objectives** are to:
 
 -   Explain the purpose of a properly written README file and use the
     `{usethis}` package to create one.

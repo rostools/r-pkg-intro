@@ -10,12 +10,12 @@
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 -   Explain why high-quality, well-written function documentation is
     important when creating a package intended to be used by others.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 -   Describe the purpose of function-specific documentation and identify
     core components to include in the documentation.

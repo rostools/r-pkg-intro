@@ -30,13 +30,13 @@ package, documenting them, and how to stop your functions with an error.
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 1.  Review the core workflow in creating functions and describe
     additional workflows and software development principles required to
     formally (and effectively) develop functions within an R package.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 -   Review and apply the workflow for converting code into a function.
 -   Identify approaches and "code patterns" for writing your functions

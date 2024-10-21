@@ -13,12 +13,12 @@ debugger to debug code.
 
 ## Learning objectives
 
-The overall learning outcome of this session is to:
+The **overall learning** outcome of this session is to:
 
 -   Explain the concept of debugging in package development and apply
     formal tools and workflows within R and RStudio.
 
-Specific objectives are:
+Specific **objectives** are to:
 
 -   Explain debugging in the context of package development, and compare
     formal vs informal workflows for debugging.
