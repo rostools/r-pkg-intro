@@ -38,13 +38,13 @@ The overall **learning outcome** for this session is to:
 
 Specific **objectives** are to:
 
--   Review and apply the workflow for converting code into a function.
--   Identify approaches and "code patterns" for writing your functions
+1.  Review and apply the workflow for converting code into a function.
+2.  Identify approaches and "code patterns" for writing your functions
     that ensure they are internally self-contained and reusable.
--   Explain what package dependency means in the context of packages and
+3.  Explain what package dependency means in the context of packages and
     how you formally manage dependencies when writing functions as part
     of a package.
--   Use control flow processes like `if () {} else() {}` to modify what
+4.  Use control flow processes like `if () {} else() {}` to modify what
     a function does based on a condition.
 
 ## TODO: Section

@@ -12,20 +12,20 @@
 
 The overall **learning outcome** for this session is to:
 
--   Explain why high-quality, well-written function documentation is
+1.  Explain why high-quality, well-written function documentation is
     important when creating a package intended to be used by others.
 
 Specific **objectives** are to:
 
--   Describe the purpose of function-specific documentation and identify
+1.  Describe the purpose of function-specific documentation and identify
     core components to include in the documentation.
--   Use `{roxygen2}` to setup a template documentation structure and
+2.  Use `{roxygen2}` to setup a template documentation structure and
     then write Markdown-based documentation within that template for
     functions.
--   Use the examples section of the documentation to help prototype and
+3.  Use the examples section of the documentation to help prototype and
     informally check that the function works. Then later write more
     example code that highlights how to use the function.
--   Use `{devtools}` to automatically generate package documentation
+4.  Use `{devtools}` to automatically generate package documentation
     that can be accessible when using `?function_name`.
 
 ## Documenting Functions

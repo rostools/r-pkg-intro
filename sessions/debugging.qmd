@@ -15,19 +15,19 @@ debugger to debug code.
 
 The **overall learning** outcome of this session is to:
 
--   Explain the concept of debugging in package development and apply
+1.  Explain the concept of debugging in package development and apply
     formal tools and workflows within R and RStudio.
 
 Specific **objectives** are to:
 
--   Explain debugging in the context of package development, and compare
+1.  Explain debugging in the context of package development, and compare
     formal vs informal workflows for debugging.
--   Identify how to start the debugger tool in RStudio, what it looks
+2.  Identify how to start the debugger tool in RStudio, what it looks
     like when it is running, and use it to debug functions that cause
     issues.
--   Navigate and explain some basic `traceback()` error messages to help
+3.  Navigate and explain some basic `traceback()` error messages to help
     identify which function is causing an error.
--   Describe how "defensive programming" can help reduce errors and
+4.  Describe how "defensive programming" can help reduce errors and
     inform where errors may occur by applying functions from the
     `{checkmate}` and `{cli}` packages.
 
