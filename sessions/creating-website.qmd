@@ -8,14 +8,14 @@
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 1.  Explain the main benefits to creating a website for your package,
     describe items that are useful to communicate to (potential) users,
     and use the `{pkgdown}` package to auto-generate a website for you
     whenever changes are made.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 1.  Identify and list some benefits of using a website to communicate
     details about your package.

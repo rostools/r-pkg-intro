@@ -21,13 +21,13 @@ the keyboard.
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 1.  Explain in general terms why and how an R package can simplify your
     work, as well as a high-level overview of the workflow in developing
     an R package.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 1.  Compare the differences in work and effort between creating simple
     scripts to help with your and others' work and making a simple R package of

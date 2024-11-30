@@ -10,13 +10,13 @@
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 1.  Describe what an R package looks like and create a basic package
     setup using tools that help streamline and assist with these initial
     tasks.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 1.  Describe what a basic R package "physically" looks like, what the
     required files and folders are, and what their purpose is.

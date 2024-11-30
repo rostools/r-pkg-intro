@@ -15,13 +15,13 @@
 
 ## Learning objectives
 
-The overall **learning outcome** for this session is:
+The overall **learning outcome** for this session is to:
 
 1.  Explain what *formal testing* means when developing packages,
     describe how they are structured, and construct simple tests of
     functions.
 
-Specific **objectives** are:
+Specific **objectives** are to:
 
 1.  Explain the difference between informal testing and formal testing,
     as well as the different types of formal testing when developing R
