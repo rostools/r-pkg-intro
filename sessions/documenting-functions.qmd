@@ -13,7 +13,8 @@
 The overall **learning outcome** for this session is to:
 
 1.  Explain why high-quality, well-written function documentation is
-    important when creating a package intended to be used by others.
+    important when creating a package intended to be used by others and
+    create function documentation using `{roxygen2}`.
 
 Specific **objectives** are to:
 
