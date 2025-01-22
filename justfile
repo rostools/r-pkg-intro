@@ -2,8 +2,8 @@
     just --list --unsorted
 
 # Run all recipes
-run-all: build-site 
+run-all: build-website 
 
 # Build Quarto website
-build-site: 
+build-website: 
   quarto render
