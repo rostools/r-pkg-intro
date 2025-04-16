@@ -113,9 +113,10 @@ These checks verify that the package has:
 
 among other things.
 
-To-Do: Explain the output of a CRAN check
+TODO: Explain the output of a CRAN check
 
-## exercise
+## Exercise: Create your first unit test
+
 
 Complete these tasks as part of the package for your first project
 assignment. Refer to the project assignment TODO: Add ref to assignment
@@ -151,7 +152,7 @@ task, and pushing to GitHub.
 TODO: Reading text
 :::
 
-## Exercise: TODO: Add title
+## Exercise: TODO: Create unit tests for the remaining functions in your package
 
 > Time: \## minutes.
 
@@ -160,6 +161,19 @@ TODO: Reading text
 #| code-fold: true
 #| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
 ```
+
+TODO: Reading text
+
+## Exercise: TODO: Run a CRAN check on the package
+
+> Time: \## minutes.
+
+```{r solution-LABEL}
+#| eval: false
+#| code-fold: true
+#| code-summary: "**Click for the solution**. Only click if you are struggling or are out of time."
+```
+
 
 ## Summary
 
